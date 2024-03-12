@@ -47,7 +47,7 @@ source /etc/profile.d/jdk11.sh
 java -version
 ```
 result show:    
-`openjdk version "11.0.1" 2018-10-16
+`<p> openjdk version "11.0.1" 2018-10-16 <br /> 
 OpenJDK Runtime Environment 18.9 (build 11.0.1+13)
 OpenJDK 64-Bit Server VM 18.9 (build 11.0.1+13, mixed mode)`
 
