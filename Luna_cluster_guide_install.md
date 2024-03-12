@@ -20,3 +20,32 @@ The resulting Luna Streaming deployment includes:
   - BookKeeper should use one volume device for the journal, and one volume device for the ledgers. The journal device should be 20GB. The ledger volume device should be sized to hold the expected amount of stored message data.
   - DataStax recommends a separate data disk volume for ZooKeeper.
   - Operating System Settings Disable Swap and set Linux Transparent Huge Pages (THP) to madvice. Check this setting with cat /sys/kernel/mm/transparent_hugepage/enabled and cat /sys/kernel/mm/transparent_hugepage/defrag
+
+## Install java JDK version 11
+1. Download 
+```
+curl -O https://download.java.net/java/GA/jdk11/13/GPL/openjdk-11.0.1_linux-x64_bin.tar.gz
+tar zxvf openjdk-11.0.1_linux-x64_bin.tar.gz
+mv jdk-11.0.1 /usr/local/
+```
+```
+# edit file path
+vi /etc/profile.d/jdk11.sh
+```
+```
+# create new
+export JAVA_HOME=/usr/local/jdk-11.0.1
+export PATH=$PATH:$JAVA_HOME/bin
+```
+```
+#commit file edit
+source /etc/profile.d/jdk11.sh
+```
+```
+# check version
+java -version
+```
+result `openjdk version "11.0.1" 2018-10-16  
+OpenJDK Runtime Environment 18.9 (build 11.0.1+13)  
+OpenJDK 64-Bit Server VM 18.9 (build 11.0.1+13, mixed mode)`
+
