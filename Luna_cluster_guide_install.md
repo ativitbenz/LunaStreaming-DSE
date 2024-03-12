@@ -22,7 +22,7 @@ The resulting Luna Streaming deployment includes:
   - Operating System Settings Disable Swap and set Linux Transparent Huge Pages (THP) to madvice. Check this setting with cat /sys/kernel/mm/transparent_hugepage/enabled and cat /sys/kernel/mm/transparent_hugepage/defrag
 
 ## Install java JDK version 11
-link ref: https://stackoverflow.com/questions/53378483/installing-openjdk-11-on-centos-using-yum
+link ref: `https://stackoverflow.com/questions/53378483/installing-openjdk-11-on-centos-using-yum`
 ```
 # download 
 curl -O https://download.java.net/java/GA/jdk11/13/GPL/openjdk-11.0.1_linux-x64_bin.tar.gz
